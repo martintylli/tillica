@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt – Tillica</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <img src="tillica-logo.png" alt="Tillica logotyp" class="logo">
+    <h1 class="title">Kontakt</h1>
+    <p class="subtitle">Hör gärna av dig – vi svarar vanligtvis inom 1–2 dagar</p>
+  </header>
+
+  <nav class="nav">
+    <a href="index.html">Hem</a>
+    <a href="om-oss.html">Om oss</a>
+    <a href="produkter.html">Produkter</a>
+    <a href="kontakt.html">Kontakt</a>
+  </nav>
+
+  <main class="container">
+    <h2>Skicka ett meddelande</h2>
+    <form onsubmit="return openMailto(this)">
+      <input type="text" name="name" placeholder="Ditt namn" required>
+      <input type="email" name="email" placeholder="Din e-post" required>
+      <textarea name="message" rows="6" placeholder="Meddelande" required></textarea>
+      <button type="submit">Skicka</button>
+    </form>
+
+    <h2 style="margin-top:2rem">Kontaktuppgifter</h2>
+    <p>
+      E-post: <a href="mailto:info@tillica.fi">info@tillica.fi</a><br>
+      (Uppdatera e-postadressen i länken när ni har satt upp den i Zoner.)
+    </p>
+
+    <p class="callout">Vi finns i Finland och erbjuder service på svenska och finska.</p>
+  </main>
+
+  <footer class="site-footer">© <span id="y"></span> Tillica</footer>
+
+  <script>
+    document.getElementById('y').textContent=new Date().getFullYear();
+    function openMailto(f){
+      const to = 'info@tillica.fi'; // ändra vid behov
+      const subj = encodeURIComponent('Kontakt via Tillica.fi');
+      const body = encodeURIComponent(
+        `Namn: ${f.name.value}\nE-post: ${f.email.value}\n\n${f.message.value}`
+      );
+      window.location.href = `mailto:${to}?subject=${subj}&body=${body}`;
+      return false; // hindra vanlig form-post
+    }
+  </script>
+</body>
+</html>
