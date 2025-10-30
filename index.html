@@ -3,213 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tillica – Handgjorda produkter med omsorg</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: "Georgia", serif;
-      background-color: #f7f5f1;
-      color: #3e372e;
-      line-height: 1.6;
-    }
-
-    header {
-      text-align: center;
-      padding: 2.5rem 1rem;
-      background-color: #f7f5f1;
-    }
-
-    header img {
-      width: 200px;
-      height: auto;
-      margin-bottom: 1rem;
-    }
-
-    h1 {
-      font-size: 2.4rem;
-      color: #3e372e;
-      letter-spacing: 1px;
-      margin: 0;
-    }
-
-    p.subtitle {
-      color: #6c674a;
-      font-style: italic;
-      margin-top: 0.5rem;
-      font-size: 1.1rem;
-    }
-
-    nav {
-      background-color: #6c674a;
-      text-align: center;
-      padding: 0.7rem 0;
-    }
-
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 1.5rem;
-      font-size: 1rem;
-      transition: opacity 0.3s ease;
-    }
-
-    nav a:hover {
-      opacity: 0.7;
-    }
-
-    main {
-      max-width: 900px;
-      margin: 3rem auto;
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.08);
-      padding: 2.5rem 3rem;
-    }
-
-    h2 {
-      text-align: center;
-      color: #4c4738;
-      font-size: 1.8rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .intro {
-      text-align: center;
-      font-size: 1.1rem;
-      line-height: 1.7;
-      margin-bottom: 2rem;
-    }
-
-    .about {
-      margin-bottom: 3rem;
-    }
-
-    .about h3 {
-      color: #4c4738;
-      font-size: 1.4rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .about p {
-      margin-top: 0.2rem;
-      text-align: justify;
-    }
-
-    .product-section {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.5rem;
-      text-align: center;
-    }
-
-    .product {
-      background: #f7f5f1;
-      border-radius: 10px;
-      padding: 1.5rem;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .product:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-    }
-
-    .product img {
-      width: 100%;
-      border-radius: 8px;
-    }
-
-    .product h3 {
-      margin-top: 1rem;
-      font-size: 1.2rem;
-      color: #3e372e;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      color: #6c674a;
-      font-size: 0.95rem;
-    }
-
-    .coming-soon {
-      margin-top: 2rem;
-      text-align: center;
-      background: #e6e2d3;
-      padding: 1.5rem;
-      border-radius: 8px;
-      font-style: italic;
-    }
-  </style>
+  <title>Tillica – Handgjorda produkter</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-  <header>
-    <img src="tillica-logo.png" alt="Tillica logotyp">
-    <h1>Tillica</h1>
-    <p class="subtitle">Handgjorda produkter med omtanke och stil</p>
+  <header class="site-header">
+    <img src="tillica-logo.png" alt="Tillica logotyp" class="logo">
+    <h1 class="title">Tillica</h1>
+    <p class="subtitle">Handgjorda textilier & smarta tillbehör – gjort i Finland</p>
   </header>
 
-  <nav>
-    <a href="#">Hem</a>
-    <a href="#">Om oss</a>
-    <a href="#">Produkter</a>
-    <a href="#">Kontakt</a>
+  <nav class="nav">
+    <a href="index.html">Hem</a>
+    <a href="om-oss.html">Om oss</a>
+    <a href="produkter.html">Produkter</a>
+    <a href="kontakt.html">Kontakt</a>
   </nav>
 
-  <main>
-    <h2>Välkommen till Tillica</h2>
-    <p class="intro">
-      Tillica är ett finländskt hantverksmärke som kombinerar traditionellt textilhantverk med modern design.  
-      Vi skapar specialsydda handdukar och hållbara produkter i naturliga färger – allt tillverkat med omsorg i Finland.
+  <main class="container">
+    <h2>Välkommen</h2>
+    <p>
+      Vi syr specialhanddukar och andra hållbara produkter i naturliga färger. 
+      Vi utvecklar också smarta lösningar som <strong>LevelGo</strong> för camping och husbil.
     </p>
 
-    <section class="about">
-      <h3>Vårt hantverk</h3>
-      <p>
-        Varje produkt från Tillica är resultatet av noggrant handarbete och en passion för hållbar kvalitet.  
-        Våra handdukar sys i små serier, vilket gör varje exemplar unikt.  
-        Vi använder högklassiga naturmaterial som linne och bomull – utvalda för sin känsla och livslängd.
-      </p>
-      <p>
-        Utöver våra textilprodukter utvecklar vi även tekniska tillbehör för camping och fritid, som exempelvis <strong>LevelGo</strong> –  
-        en smart nivåsensor för husvagn och husbil, utvecklad och tillverkad av Tillica.
-      </p>
-    </section>
-
-    <section class="product-section">
-      <div class="product">
+    <div class="grid">
+      <div class="card">
         <img src="handduk.jpg" alt="Tillica handduk">
         <h3>Handgjorda handdukar</h3>
-        <p>Mjuka, slitstarka och med naturinspirerad design. Varje handduk är unik.</p>
+        <p>Mjuka material, tidlös design och lång livslängd.</p>
       </div>
-
-      <div class="product">
-        <img src="levelgo.jpg" alt="LevelGo produkt">
+      <div class="card">
+        <img src="levelgo.jpg" alt="LevelGo">
         <h3>LevelGo</h3>
-        <p>Smart nivåsystem för husvagn & husbil – precision i fickformat.</p>
+        <p>Praktisk nivåsensor – utvecklad av Tillica.</p>
       </div>
-
-      <div class="product">
-        <img src="presentkort.jpg" alt="Tillica presentkort">
+      <div class="card">
+        <img src="presentkort.jpg" alt="Presentkort">
         <h3>Presentkort</h3>
-        <p>Ge bort hantverk och kvalitet – ett presentkort från Tillica.</p>
+        <p>Ge bort kvalitet och hantverk.</p>
       </div>
-    </section>
-
-    <div class="coming-soon">
-      🌿 Vår webshop öppnar snart – följ oss för uppdateringar!
     </div>
+
+    <p class="callout">🌿 Webshoppen öppnar snart – följ oss för nyheter!</p>
   </main>
 
-  <footer>
-    © <span id="year"></span> Tillica – Handgjorda produkter från Finland.
-  </footer>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
-
+  <footer class="site-footer">© <span id="y"></span> Tillica</footer>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
-
