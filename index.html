@@ -1,18 +1,37 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tillica – Handgjorda produkter</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tillica – Hantverk & smarta tillbehör</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Liten hem-specifik styling utan att röra styles.css */
+    .hero{max-width:1100px;margin:2rem auto 0;padding:0 1rem}
+    .hero-inner{display:grid;gap:2rem;grid-template-columns:1.2fr .8fr;align-items:center}
+    .hero h1{font-size:2.4rem;margin:.25rem 0}
+    .hero p{font-size:1.1rem;color:#6c674a}
+    .cta-row{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1rem}
+    .btn{display:inline-block;background:var(--muted);color:#fff;padding:.8rem 1.1rem;border-radius:10px;text-decoration:none}
+    .btn.alt{background:#4c4738}
+    .usp{max-width:1100px;margin:1.5rem auto;padding:0 1rem}
+    .usp-strip{display:grid;gap:.75rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+    .usp-item{background:var(--card);border-radius:12px;box-shadow:0 2px 6px rgba(0,0,0,.06);padding:1rem 1.1rem}
+    .split{max-width:1100px;margin:2rem auto;padding:0 1rem;display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+    .quote{background:var(--hint);padding:1.2rem 1.4rem;border-radius:10px;font-style:italic}
+    .mini-cards .card{min-height:180px}
+    .center{text-align:center}
+  </style>
 </head>
 <body>
+  <!-- Header -->
   <header class="site-header">
     <img src="tillica-logo.png" alt="Tillica logotyp" class="logo">
     <h1 class="title">Tillica</h1>
-    <p class="subtitle">Handgjorda textilier & smarta tillbehör – gjort i Finland</p>
+    <p class="subtitle">Hantverk i naturtoner – textilier & smarta tillbehör från Finland</p>
   </header>
 
+  <!-- Nav -->
   <nav class="nav">
     <a href="index.html">Hem</a>
     <a href="om-oss.html">Om oss</a>
@@ -20,34 +39,89 @@
     <a href="kontakt.html">Kontakt</a>
   </nav>
 
-  <main class="container">
-    <h2>Välkommen</h2>
-    <p>
-      Vi syr specialhanddukar och andra hållbara produkter i naturliga färger. 
-      Vi utvecklar också smarta lösningar som <strong>LevelGo</strong> för camping och husbil.
-    </p>
-
-    <div class="grid">
-      <div class="card">
-        <img src="handduk.jpg" alt="Tillica handduk">
-        <h3>Handgjorda handdukar</h3>
-        <p>Mjuka material, tidlös design och lång livslängd.</p>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div>
+        <h1>Välkommen hem till Tillica</h1>
+        <p>
+          Vi syr specialhanddukar i små serier och utvecklar smarta produkter för ett enklare frilufts-
+          och campingsliv. Allt präglat av lugn estetik, hållbara material och pålitlig funktion.
+        </p>
+        <div class="cta-row">
+          <a class="btn" href="produkter.html">Utforska våra produkter</a>
+          <a class="btn alt" href="om-oss.html">Läs om vår berättelse</a>
+        </div>
       </div>
-      <div class="card">
-        <img src="levelgo.jpg" alt="LevelGo">
-        <h3>LevelGo</h3>
-        <p>Praktisk nivåsensor – utvecklad av Tillica.</p>
-      </div>
-      <div class="card">
-        <img src="presentkort.jpg" alt="Presentkort">
-        <h3>Presentkort</h3>
-        <p>Ge bort kvalitet och hantverk.</p>
+      <div class="center">
+        <img src="handduk.jpg" alt="Tillica handduk – naturtoner" style="width:100%;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,.10)">
       </div>
     </div>
+  </section>
 
-    <p class="callout">🌿 Webshoppen öppnar snart – följ oss för nyheter!</p>
+  <!-- USP strip -->
+  <section class="usp">
+    <div class="usp-strip">
+      <div class="usp-item"><strong>Hantverkskvalitet</strong><br>Små serier, noggrant valda material.</div>
+      <div class="usp-item"><strong>Naturtoner & form</strong><br>Tidlös design som håller över tid.</div>
+      <div class="usp-item"><strong>Tillverkat i Finland</strong><br>Nära produktion och korta ledtider.</div>
+      <div class="usp-item"><strong>Smarta lösningar</strong><br>LevelGo & andra praktiska tillbehör.</div>
+    </div>
+  </section>
+
+  <!-- Highlight-sektioner -->
+  <main class="container">
+    <h2>Utvalda områden</h2>
+    <div class="grid mini-cards">
+      <div class="card">
+        <img src="presentkort.jpg" alt="Presentkort" />
+        <h3>Presentkort</h3>
+        <p>Ge bort hantverk och kvalitet. Välj valfri summa – perfekt gåva.</p>
+        <p><a class="btn" href="kontakt.html">Beställ presentkort</a></p>
+      </div>
+      <div class="card">
+        <img src="levelgo.jpg" alt="LevelGo produkt" />
+        <h3>LevelGo</h3>
+        <p>Smart nivåsensor för husvagn & husbil. Enkel att använda, exakt i vardagen.</p>
+        <p><a class="btn" href="produkter.html#levelgo">Läs mer</a></p>
+      </div>
+      <div class="card">
+        <img src="handduk.jpg" alt="Handgjorda handdukar" />
+        <h3>Specialhanddukar</h3>
+        <p>Mjuk, hållbar frotté med snygg passform och kontrastkant.</p>
+        <p><a class="btn" href="produkter.html#handdukar">Se varianter</a></p>
+      </div>
+    </div>
   </main>
 
+  <!-- Om + Citat -->
+  <section class="split">
+    <div>
+      <h2>Varför vi gör detta</h2>
+      <p>
+        Vår drivkraft är enkel: produkter som känns bra, håller länge och ser bra ut – både hemma och på resa.
+        Vi tror på material som åldras vackert och lösningar som gör vardagen smidigare.
+      </p>
+      <p><a class="btn" href="om-oss.html">Läs mer om oss</a></p>
+    </div>
+    <div class="quote">
+      “Fantastisk kvalitet och service. Handdukarna blev barnens favoriter direkt
+      och LevelGo gjorde första natten i husbilen mycket enklare.”
+      <br>– Kundfeedback
+    </div>
+  </section>
+
+  <!-- Avslutande CTA -->
+  <section class="container center">
+    <h2>Klara att börja?</h2>
+    <p>Webshoppen öppnar snart. Tills dess tar vi gärna beställningar via e-post.</p>
+    <p>
+      <a class="btn" href="produkter.html">Se produkter</a>
+      <a class="btn alt" href="mailto:info@tillica.fi?subject=Best%C3%A4llning%20via%20tillica.fi">Maila oss</a>
+    </p>
+  </section>
+
+  <!-- Footer -->
   <footer class="site-footer">© <span id="y"></span> Tillica</footer>
   <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
